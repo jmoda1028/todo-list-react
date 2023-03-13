@@ -1,0 +1,250 @@
+@import './fonts';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: black;
+    background: linear-gradient(to left, #68EACC 40%, #497BE8 60%);
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+  
+  .modal{
+    // display: none;
+    position: absolute;
+   
+    // margin: auto 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // background: red;
+    border-radius: 8px;
+    // padding-top: 65px;
+    z-index: 101;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+
+      .edit-todo--form{
+        position: relative;
+        background: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        padding: 28px;
+
+        .exit-btn{
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          cursor: pointer;
+        }
+
+        h3{
+          margin-top: 5px;
+          margin-bottom: 20px;
+        }
+
+        .todo-update--input{
+            outline: none;
+            background: none;
+            border: 1px solid #8758ff;
+            width: 343px;
+            padding: 8px 10px;
+        }
+
+        .btn-todo__update{
+            background: #8758ff;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            padding: 8.8px;
+        }
+    }
+
+    .confirm__delete{
+      background: #fff;
+      padding: 28px;
+      border-radius: 8px; 
+
+      h3{
+        margin-bottom: 15px;
+      }
+
+      p{
+        border-bottom: 1px solid #cccccc;
+        border-top: 1px solid #cccccc;
+        border-width: 100%;
+        padding: 15px 0;
+      }
+
+      .confirm__delete--btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 18px;
+
+        button{
+          padding: 10px;
+          border-radius: 10px;
+          cursor: pointer; 
+        }
+
+        .btn--cancel{
+          border: 1px solid #cccccc;
+          background: #fff;
+
+          &:hover{
+            background: #cccccc;
+          }
+        }
+
+        .confirm--btn-delete{
+          border: none;
+          background: #f44336;
+          color: #fff;
+
+          &:hover{
+            background: #f7776e;
+            color: black;
+          }
+        }
+      }
+    }
+    
+    
+  }
+
+.main-app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+  .todo--wrapper{
+      background: #fff;
+      margin: 98px 0;
+      padding: 32px;
+      border-radius: 5px;
+      width: 480px;
+      box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+
+      h1{
+        margin-bottom: 20px;
+      }
+
+      p{
+        color: #454b54;
+        margin-top: 20px;
+      }
+
+      .TodoForm{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .todo-input{
+          outline: none;
+          background: none;
+          border: 1px solid #8758ff;
+          width: 343px;
+          padding: 8px 10px;
+        }
+
+        .todo-btn{
+          background: #8758ff;
+          border: none;
+          cursor: pointer;
+          color: #fff;
+          padding: 8.8px;
+        }
+      }
+
+
+      .todo__list-container{
+        max-height: 320px;
+        overflow-y: scroll;
+        overflow-x: unset;
+        // border:1px solid #212428;
+
+        &::-webkit-scrollbar{
+          display: none;
+        }
+  
+        .todo-list{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background: #f2f2f2;
+          // background: linear-gradient(to left, #497BE8 40%, #68EACC 60%);
+          margin: 10px 0;
+          padding: 10px;
+          border-radius: 5px;
+          width: 100%;
+
+          .task--done{
+            text-decoration: line-through;
+            color: #b3b3b3;
+          }
+
+          .todo-btn--container{
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            column-gap: 10px;
+
+            .btn--check,
+            .btn--edit,
+            .btn--delete{
+              padding: 6px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+
+            .btn--check{
+              background: #4CAF50;
+            }
+
+            .btn--edit{
+              background: #008CBA;
+            }
+
+            .btn--delete{
+              background: #f44336;
+            }
+
+            #btn--icon{
+              color: #fff;
+            }
+
+            .hide-btn{
+              display: none;
+            }
+
+            #hide--btn{
+              display: none;
+            }
+          }
+        }  
+      }
+
+      
+  }
+}  
