@@ -71,7 +71,7 @@ const Todo = (props) => {
     return (
 
         <div className='todo--wrapper'>
-            <h1>Todo App</h1>
+            <h1>Todo React-App</h1>
             <AddForm/> 
                 <div className="todo__list-container">
                     {todos.map((todo) => (
