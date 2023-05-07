@@ -23,7 +23,7 @@ const EditForm = (props) => {
     // console.log(isModalVisible);
 
     const handleUpdate = (todoId) => {
-        axios.put(`http://127.0.0.1:8000/api/todos/${todoId}/`, {
+        axios.put(`https://web-production-3ae5.up.railway.app/api/todos/${todoId}/`, {
             id: todoId,
             name: value,
         })

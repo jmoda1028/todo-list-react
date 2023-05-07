@@ -38,7 +38,7 @@ const Todo = (props) => {
 
     const loadData = useCallback(async () => {
         try {
-            const res = await axios.get('http://127.0.0.1:8000/api/todos/')
+            const res = await axios.get('https://web-production-3ae5.up.railway.app/api/todos/')
             setTodos(res.data);
         }
         catch(error){
@@ -47,7 +47,7 @@ const Todo = (props) => {
     }, [])
 
     const pendingTasks = useCallback(async () => {
-        axios.get('http://127.0.0.1:8000/api/count_pending_tasks/')
+        axios.get('https://web-production-3ae5.up.railway.app/api/count_pending_tasks/')
         .then(res => {
             const {count} = res.data;
     

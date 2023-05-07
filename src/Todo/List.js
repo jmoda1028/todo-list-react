@@ -18,7 +18,7 @@ const List = (props) => {
   const todoDoneHandler = (e) => {
     e.preventDefault();
     const todoId = todo.id;
-    axios.patch(`http://127.0.0.1:8000/api/todos/${todoId}/`, {
+    axios.patch(`https://web-production-3ae5.up.railway.app/api/todos/${todoId}/`, {
             is_done: true
     })
     .then(res => {
@@ -33,7 +33,7 @@ const List = (props) => {
   
   const deleteTodoHandler = () => {
     const todoId = todo.id;
-    axios.delete(`http://127.0.0.1:8000/api/todos/${todoId}/`, {
+    axios.delete(`https://web-production-3ae5.up.railway.app/api/todos/${todoId}/`, {
         })
         .then(res => {
 
